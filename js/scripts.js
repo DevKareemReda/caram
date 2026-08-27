@@ -3,11 +3,13 @@ const swiper = new Swiper(".mySwiper", {
 
 	loop: true,
 
-	speed: 900,
+	speed: 1200,
 
 	effect: "creative",
 	autoplay: {
 		delay: 10000,
+		pauseOnMouseEnter: true,
+		disableOnInteraction: false,
 	},
 
 	creativeEffect: {
@@ -20,20 +22,18 @@ const swiper = new Swiper(".mySwiper", {
 			translate: ["100%", 0, 0],
 		},
 	},
-
+pagination: {
+    el: ".slider-dots",
+    clickable: true,
+    bulletClass: "dots",
+    bulletActiveClass: "active",
+  },
 	navigation: {
 		prevEl: ".slider-prev",
 		nextEl: ".slider-next",
 	},
 });
 let headerTop = document.querySelector(".header-top");
-
-const calcHeight = () => {
-	document.body.style.paddingTop = headerTop.clientHeight + "px";
-};
-
-window.onresize = calcHeight;
-window.onload = calcHeight;
 
 // when scroll down hide navbar
 let prevScroll = window.scrollY;
