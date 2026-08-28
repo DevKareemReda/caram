@@ -114,7 +114,8 @@ svg {
 	z-index: 999;
 	width: 100%;
 }
-.header-top.active {
+.header-top.active,
+.header-top:hover {
 	background-color: #fff;
 }
 .header-top .logo {
@@ -133,7 +134,7 @@ svg {
 	left: 0;
 	width: 100%;
 	height: 2px;
-	transition: transform 0.3s linear;
+	transition:  0.4s transform;
 	background-color: #fff;
 	transform: scaleX(0);
 }
@@ -158,6 +159,7 @@ svg {
 	width: fit-content;
 	cursor: pointer;
 	display: flex;
+	flex-direction: column;
 }
 .header-top .icon-nav span {
 	border-bottom: 2px solid #fff;
@@ -165,25 +167,6 @@ svg {
 	height: 2px;
 	transition: 0.4s;
 	position: relative;
-}
-
-.header-top .icon-nav span:before,
-.header-top .icon-nav span:after {
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 2px;
-	left: 0;
-	border-bottom: 2px solid #fff;
-	transition: transform 0.4s;
-}
-
-.header-top .icon-nav span:before {
-	top: -6px;
-}
-
-.header-top .icon-nav span:after {
-	top: 6px;
 }
 
 .header-top .header-icons li {
@@ -315,24 +298,33 @@ svg {
 	}
 }
 
-.header-top.active .menu li a {
+.header-top.active .menu li a,
+.header-top:hover .menu li a {
 	color: var(--fColor);
 }
-.header-top.active .header-icons li.register path {
+.header-top.active .header-icons li.register path,
+.header-top:hover .header-icons li.register path {
 	stroke: var(--fColor);
 }
 .header-top.active .header-icons li svg,
-.header-top.active .logo path {
+.header-top.active .logo path,
+.header-top:hover .header-icons li svg,
+.header-top:hover .logo path {
 	fill: var(--fColor);
 }
 
 .header-top.active .icon-nav span,
 .header-top.active .icon-nav span,
 .header-top.active .menu li::after,
-.header-top.active .icon-nav span:before {
+.header-top.active .icon-nav span:before,
+.header-top:hover .icon-nav span,
+.header-top:hover .icon-nav span,
+.header-top:hover .menu li::after,
+.header-top:hover .icon-nav span:before {
 	border-bottom: 2px solid var(--fColor);
 }
-.header-top.active .header-icons li span.count {
+.header-top.active .header-icons li span.count,
+.header-top:hover .header-icons li span.count {
 	background-color: var(--fColor);
 	color: #fff;
 }
@@ -356,7 +348,7 @@ svg {
 }
 
 .sec-slider .slider-desc h3 {
-	font-size: 50px;
+	font-size:45px;
 	font-weight: 200;
 	text-transform: capitalize;
 	transition: 0.4s;
