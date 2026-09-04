@@ -179,9 +179,7 @@ svg {
 	fill: #fff;
 	transition: fill 0.4s;
 }
-.header-top .header-icons li.register path {
-	transition: stroke 0.4s;
-}
+
 .header-top .header-icons li:last-of-type {
 	margin-right: 0;
 }
@@ -302,10 +300,7 @@ svg {
 .header-top:hover .menu li a {
 	color: var(--fColor);
 }
-.header-top.active .header-icons li.register path,
-.header-top:hover .header-icons li.register path {
-	stroke: var(--fColor);
-}
+
 .header-top.active .header-icons li svg,
 .header-top.active .logo path,
 .header-top:hover .header-icons li svg,
@@ -348,7 +343,7 @@ svg {
 }
 
 .sec-slider .slider-desc h3 {
-	font-size:45px;
+	font-size:50px;
 	font-weight: 200;
 	text-transform: capitalize;
 	transition: 0.4s;
