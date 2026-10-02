@@ -5,6 +5,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap");
 
 /* _____ style all rules _____ */
 *,
@@ -16,14 +17,14 @@
 }
 
 :root {
-	--fColor: #23232c;
+	--fColor: #1A202C;
 }
 
 body {
 	font-size: 14px;
 	color: var(--fColor);
 	overflow-x: hidden;
-	height: 2000px;
+	height: 3000px;
 	font-family: "poppins", sans-serif;
 }
 
@@ -31,6 +32,13 @@ body {
 	font-family: "Sofia Pro";
 	src: url("../fonts/Sofia-Pro-ExtraLight-Az.otf") format("opentype");
 	font-style: normal;
+}
+
+@font-face {
+	font-family: "Significent";
+	src: url("../fonts/Significent.ttf") format("opentype");
+	font-style: normal;
+	font-weight: normal;
 }
 
 ul {
@@ -59,8 +67,14 @@ img {
 	text-align: center;
 }
 
-.text-left {
+.text-left
+ {
 	text-align: left;
+}
+@media screen and (min-width: 768px) {
+	.text-md-left {
+		text-align: left;
+	}
 }
 
 .text-right {
@@ -216,7 +230,8 @@ svg {
 	object-fit: cover;
 }
 
-.header-top .header-icons li.shopping .cart-items .cart-desc {
+.header-top .header-icons li.sho
+pping .cart-items .cart-desc {
 	margin-left: 15px;
 	font-size: 11px;
 	color: #535353;
@@ -351,11 +366,11 @@ svg {
 .sec-slider .slider-desc h3 {
 	font-size: 50px;
 	font-weight: 200;
-	text-transform: capitalize;
 	transition: 0.4s;
 	color: inherit;
-	letter-spacing: 1px;
+	letter-spacing: 5px;
 	color: #fff;
+	font-family: "Significent", sans-serif;
 }
 .sec-slider .slider-desc p {
 	color: #fff;
@@ -421,7 +436,7 @@ svg {
 .sec-slider .slider-arrow {
 	width: 60px;
 	height: 60px;
-	display: flex;
+	display: flex !important;
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
@@ -489,126 +504,115 @@ svg {
 }
 
 /* _____ style sec-product _____ */
+/* .featured-product .featured-left{
+	position: sticky;
+	top: 90px;   align-self: flex-start;
+} */
 
-.sec-product .col {
-	margin-bottom: 20px;
+.featured-product .featured-left h3 {
+	font-size: 50px;
+	font-family: "Significent";
+	letter-spacing: 4px;
+	color: var(--fColor);
+	font-weight: 400;
 }
 
-.sec-product h3 {
-	font-size: 25px;
-	font-weight: 300;
+.featured-product .btn {
+	padding: 15px;
+	background-color: #000;
+	font-weight: 700;
+	font-size: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	font-family: "Oswald";
+	min-width: 135px;
 }
 
-.sec-product .img-hover {
+.featured-product .main-product .product-inner img {
+	object-fit: cover;
+	/* max-width: 203px; */
+	/* height: 203px; */
+	/* width: 100%; */
+}
+
+.featured-product .main-product .product-inner img:last-child {
 	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
+	inset: 0;
 	width: 100%;
 	height: 100%;
 	opacity: 0;
 	visibility: hidden;
-	transition: 0.5s;
+	transition: 0.3s linear;
 }
 
-.sec-product .product-inner:hover .img-hover {
+.featured-product .main-product .product-inner:hover img:last-child {
 	opacity: 1;
 	visibility: visible;
 }
 
-.sec-product .product-desc h3 {
-	font-size: 14px;
-	font-family: "poppins";
-	font-weight: 400;
-}
-.sec-product .product-desc h3 a{
-	transition: 0.4s;
-}
-.sec-product .product-desc span {
+.featured-product .main-product .product-inner .product-desc h3 {
+	font-family: "jost", sans-serif !important;
 	font-weight: 700;
-	font-size: 12px;
-	color: #1e1e23;
+	font-size: 14px;
 }
-.sec-product .product-desc span.discount {
-	font-size: 12px;
-	color: #909097;
-	margin-left: 13px;
+
+.featured-product .main-product .product-inner .product-desc span {
+	font-weight: 700;
+	font-size: 14px;
+	color: var(--fColor);
+	font-family: "Oswald", sans-serif;
+}
+
+.featured-product .main-product .product-inner .product-desc span.discount {
+	color: #b0b0b0;
 	text-decoration: line-through;
+	text-decoration-color: var(--fColor);
 }
 
-.sec-product .product-inner:hover .product-desc h3 a{
-	color: #9b6096;
-}
-
-.categ .row > * {
+.featured-product .main-product .product-inner .product-btn .btn {
+	cursor: pointer;
+	border-radius: 25px;
+	line-height: 44px;
 	padding: 0;
-}
-.sec-product .product-notify {
+	width: calc(100% - 35px);
+	background-color: #e7e8eb;
+	color: #000;
 	position: absolute;
-	top: 0;
 	left: 0;
-}
-.sec-product .product-notify span {
-	background-color: #f35c70;
-	font-weight: 600;
-	color: rgb(255, 255, 255);
-	line-height: 22px;
-	text-align: center;
-	text-transform: uppercase;
-	min-width: 45px;
-	min-height: 20px;
-	height: 20px;
-	padding: 0px 5px;
-	font-size: 10px;
-}
-
-.sec-product .product-desc .product-btn {
-	position: absolute;
-	right: -40%;
-	bottom:98%;
-	transition: 0.4s;
+	right: 0;
+	margin: auto;
+	bottom: 0;
+	transition: 0.3s linear;
 	opacity: 0;
 	visibility: hidden;
 }
+.featured-product .main-product .product-inner .product-btn .btn:hover {
+	background-color: #000;
+	color: #fff;
+}
 
-.sec-product .product-inner:hover .product-btn{
+.featured-product .main-product .product-inner:hover .product-btn .btn  {
 	opacity: 1;
 	visibility: visible;
-	right: 0;
+	bottom: 20px;
 }
 
-.sec-product .product-desc .product-btn .product-link {
-	text-transform: uppercase;
-	background-color: #ac6aa6;
-	font-weight: 600;
-	font-size: 10px;
-	margin-bottom: 3px;
-	padding: 6px 12px;
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-	transition: 0.2s;
-	color: #fff;
-	cursor: pointer;
-	display: block;
-	font-family: "Karla", Helvetica, Arial, sans-serif;
-
+/* .sec-product .product-desc h3 {
+	font-family: "jost" !important;
+	font-weight: 700;
 }
 
-.sec-product .product-desc .product-btn .product-link:hover {
-	background-color: #9b6096;
+.sec-product .product-desc span {
+	font-weight: 700;
+	font-size: 14px;
+	color: #1e1e23;
+	font-family: "Oswald", sans-serif;
 }
-
-
-.sec-product .product-more {
-	background-color: #ac6aa6;
-    color: #fff;
-    transition: 0.2s ease-in-out;
-    border: none;
-    cursor: pointer;
-		    padding: 13px 30px;
-    text-align: center;
-	font-family: "Karla", Helvetica, Arial, sans-serif;
-	text-transform: capitalize;
-}.sec-product .product-more:hover {
-	background-color: #9b6096;
-}
-
+.sec-product .product-desc span.discount {
+	font-size: 14px;
+	color: #b0b0b0;
+	margin-left: 13px;
+	text-decoration: line-through;
+	font-family: "Oswald", sans-serif;
+} */
