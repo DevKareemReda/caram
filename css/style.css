@@ -17,7 +17,7 @@
 }
 
 :root {
-	--fColor: #1A202C;
+	--fColor: #1a202c;
 }
 
 body {
@@ -67,8 +67,7 @@ img {
 	text-align: center;
 }
 
-.text-left
- {
+.text-left {
 	text-align: left;
 }
 @media screen and (min-width: 768px) {
@@ -356,10 +355,10 @@ pping .cart-items .cart-desc {
 	width: 100%;
 }
 .sec-slider .slider-desc {
-	transform: translateY(-50%);
+	transform: translate(-50%, -50%);
 	position: absolute;
 	top: 50%;
-	left: 15%;
+	left: 50%;
 	text-align: center;
 }
 
@@ -492,7 +491,8 @@ pping .cart-items .cart-desc {
 
 @media screen and (max-width: 576px) {
 	.sec-slider .slider-desc h3 {
-		font-size: 22px;
+		font-size: 35px;
+		letter-spacing: 0;
 	}
 
 	.sec-slider .slider-prev {
@@ -592,7 +592,7 @@ pping .cart-items .cart-desc {
 	color: #fff;
 }
 
-.featured-product .main-product .product-inner:hover .product-btn .btn  {
+.featured-product .main-product .product-inner:hover .product-btn .btn {
 	opacity: 1;
 	visibility: visible;
 	bottom: 20px;

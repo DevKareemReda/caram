@@ -1,17 +1,43 @@
-const swiper = new Swiper(".mySwiper", {
-	grabCursor: true,
+// const swiper = new Swiper(".mySwiper", {
+// 	grabCursor: true,
 
+// 	loop: true,
+
+// 	speed: 1200,
+
+// 	effect: "cards",
+// 	autoplay: {
+// 		delay: 5000,
+// 		pauseOnMouseEnter: false,
+// 		disableOnInteraction: true,
+// 	},
+// 	pagination: {
+// 		el: ".slider-dots",
+// 		clickable: true,
+// 		bulletClass: "dots",
+// 		bulletActiveClass: "active",
+// 	},
+// 	navigation: {
+// 		prevEl: ".slider-prev",
+// 		nextEl: ".slider-next",
+// 	},
+// });
+
+      var swiper = new Swiper('.mySwiper', {
+        grabCursor: true,
+        effect: 'creative',
 	loop: true,
 
 	speed: 1200,
-
-	effect: "cube",
-	autoplay: {
-		delay: 5000,
-		pauseOnMouseEnter: false,
-		disableOnInteraction: true,
-	},
-	pagination: {
+        creativeEffect: {
+          prev: {
+            shadow: true,
+            translate: ['-20%', 0, -1],
+          },
+          next: {
+            translate: ['100%', 0, 0],
+          },
+        },		pagination: {
 		el: ".slider-dots",
 		clickable: true,
 		bulletClass: "dots",
@@ -21,9 +47,8 @@ const swiper = new Swiper(".mySwiper", {
 		prevEl: ".slider-prev",
 		nextEl: ".slider-next",
 	},
-});
-
-
+			
+      });
 
 
 let headerTop = document.querySelector(".header-top");
