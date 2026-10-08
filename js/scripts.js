@@ -26,6 +26,11 @@
       var swiper = new Swiper('.mySwiper', {
         grabCursor: true,
         effect: 'creative',
+					autoplay: {
+		delay: 15000,
+		pauseOnMouseEnter: false,
+		disableOnInteraction: true,
+	},
 	loop: true,
 
 	speed: 1200,
