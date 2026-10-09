@@ -24,7 +24,6 @@ body {
 	font-size: 14px;
 	color: var(--fColor);
 	overflow-x: hidden;
-	height: 3000px;
 	font-family: "poppins", sans-serif;
 }
 
@@ -666,8 +665,8 @@ pping .cart-items .cart-desc {
 	cursor: pointer;
 	border-radius: 25px;
 	width: calc(100% - 25px);
-	background: #e7e8eb;
-	color: #000;
+	background: var(--fColor);
+	color: #fff;
 	position: absolute;
 	inset: auto 0 -15px;
 	margin: 0 auto;
@@ -708,6 +707,36 @@ pping .cart-items .cart-desc {
 	font-size: 15px;
 }
 
+.sec-products .product-inner .wishlist {
+	position: absolute;
+	right: -18px;
+	top: 15px;
+	width: 42px;
+	height: 42px;
+	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #000;
+	background-color: #fff;
+	box-shadow: 4px 4px 5px #0000001a;
+	cursor: pointer;
+	font-size: 17px;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.5s ;
+}
+
+.sec-products .product-inner .wishlist i {
+	color: #000;
+}
+
+.sec-products .product-inner:hover .wishlist {
+	opacity: 1;
+	visibility: visible;
+	right: 15px;
+}
+
 
 @media screen and (max-width: 576px) {
 	.sec-products .product-inner .offer {
@@ -718,4 +747,48 @@ pping .cart-items .cart-desc {
 	.sec-products .row > * {
 		padding: 0 8px !important;
 	}
+}
+
+.sec-products a.more {
+	padding: 15px 40px;
+	background-color: #000;
+	font-weight: 700;
+	font-size: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	font-family: "Oswald";
+	width: fit-content;
+}
+
+
+.sec-footer input {
+	    padding-left: 0;
+    padding-right: 50px;
+    color: #555;
+    height: 38px;
+    width: 100%;
+    outline: none;
+    font-size: 12px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+		font-family: inherit;
+}
+
+.sec-footer button {
+	    background-color: transparent;
+    color: #000;
+    border: none;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+padding		:12px 0 12px 16px;
+    cursor: pointer;
+}
+
+.sec-footer p {
+	font-size: 12px;
+	color: #999;
 }
