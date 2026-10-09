@@ -24,7 +24,6 @@ body {
 	font-size: 14px;
 	color: var(--fColor);
 	overflow-x: hidden;
-	height: 3000px;
 	font-family: "poppins", sans-serif;
 }
 
@@ -547,6 +546,252 @@ pping .cart-items .cart-desc {
 }
 
 .featured-product .main-product .product-inner:hover img:last-child {
+	opacity: 1;
+	visibility: visible;
+}
+
+.featured-product .main-product .product-inner .product-desc h3 {
+	font-family: "jost", sans-serif !important;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.featured-product .main-product .product-inner .product-desc span {
+	font-weight: 700;
+	font-size: 14px;
+	color: var(--fColor);
+	font-family: "Oswald", sans-serif;
+}
+
+.featured-product .main-product .product-inner .product-desc span.discount {
+	color: #b0b0b0;
+	text-decoration: line-through;
+	text-decoration-color: var(--fColor);
+}
+
+.featured-product .main-product .product-inner .product-btn .btn {
+	cursor: pointer;
+	border-radius: 25px;
+	line-height: 44px;
+	padding: 0;
+	width: calc(100% - 35px);
+	background-color: #e7e8eb;
+	color: #000;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	bottom: 0;
+	transition: 0.3s linear;
+	opacity: 0;
+	visibility: hidden;
+}
+.featured-product .main-product .product-inner .product-btn .btn:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+.featured-product .main-product .product-inner:hover .product-btn .btn {
+	opacity: 1;
+	visibility: visible;
+	bottom: 20px;
+}
+
+/* .sec-product .product-desc h3 {
+	font-family: "jost" !important;
+	font-weight: 700;
+}
+
+.sec-product .product-desc span {
+	font-weight: 700;
+	font-size: 14px;
+	color: #1e1e23;
+	font-family: "Oswald", sans-serif;
+}
+.sec-product .product-desc span.discount {
+	font-size: 14px;
+	color: #b0b0b0;
+	margin-left: 13px;
+	text-decoration: line-through;
+	font-family: "Oswald", sans-serif;
+} */
+
+.sec-products .product-head h3 {
+	font-size: 28px;
+	font-weight: 300;
+}
+
+@media screen and (max-width: 576px) {
+	.sec-products .product-head h3 {
+		font-size: 20px;
+	}
+}
+
+.sec-products .product-inner .img-hover {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.4s linear;
+}
+
+.sec-products .product-inner:hover .img-hover {
+	opacity: 1;
+	visibility: visible;
+}
+
+.sec-products .product-desc h3 {
+	font-family: "jost", sans-serif !important;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.sec-products .product-desc span {
+	font-weight: 700;
+	font-size: 14px;
+	color: var(--fColor);
+	font-family: "Oswald", sans-serif;
+}
+
+.sec-products .product-desc span.discount {
+	color: #b0b0b0;
+	text-decoration: line-through;
+	text-decoration-color: var(--fColor);
+}
+
+.sec-products .product-btn button {
+	cursor: pointer;
+	border-radius: 25px;
+	width: calc(100% - 25px);
+	background: var(--fColor);
+	color: #fff;
+	position: absolute;
+	inset: auto 0 -15px;
+	margin: 0 auto;
+	transition: 0.3s linear;
+	font: 700 10px/41px "Oswald";
+	text-transform: uppercase;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.sec-products .product-btn button:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+.sec-products .product-inner:hover .product-btn button {
+	opacity: 1;
+	visibility: visible;
+	inset: auto 0 15px;
+}
+
+.sec-products .product-inner .offer {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	background-color: #bbffbb;
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #000;
+	font-weight: 600;
+	display: block;
+	padding: 5px 14px;
+	border-radius: 20px;
+	font-family: "jost", sans-serif;
+}
+
+.sec-products .product-inner .offer i {
+	font-size: 15px;
+}
+
+.sec-products .product-inner .wishlist {
+	position: absolute;
+	right: -18px;
+	top: 15px;
+	width: 42px;
+	height: 42px;
+	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #000;
+	background-color: #fff;
+	box-shadow: 4px 4px 5px #0000001a;
+	cursor: pointer;
+	font-size: 17px;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.5s ;
+}
+
+.sec-products .product-inner .wishlist i {
+	color: #000;
+}
+
+.sec-products .product-inner:hover .wishlist {
+	opacity: 1;
+	visibility: visible;
+	right: 15px;
+}
+
+
+@media screen and (max-width: 576px) {
+	.sec-products .product-inner .offer {
+		top: 10px;
+		left: 10px;
+	}
+
+	.sec-products .row > * {
+		padding: 0 8px !important;
+	}
+}
+
+.sec-products a.more {
+	padding: 15px 40px;
+	background-color: #000;
+	font-weight: 700;
+	font-size: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	font-family: "Oswald";
+	width: fit-content;
+}
+
+
+.sec-footer input {
+	    padding-left: 0;
+    padding-right: 50px;
+    color: #555;
+    height: 38px;
+    width: 100%;
+    outline: none;
+    font-size: 12px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+		font-family: inherit;
+}
+
+.sec-footer button {
+	    background-color: transparent;
+    color: #000;
+    border: none;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+padding		:12px 0 12px 16px;
+    cursor: pointer;
+}
+
+.sec-footer p {
+	font-size: 12px;
+	color: #999;
+}.main-product .product-inner:hover img:last-child {
 	opacity: 1;
 	visibility: visible;
 }
