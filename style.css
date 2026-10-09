@@ -716,6 +716,6 @@ pping .cart-items .cart-desc {
 	}
 
 	.sec-products .row > * {
-		padding: 0 8px;
+		padding: 0 8px !important;
 	}
 }
