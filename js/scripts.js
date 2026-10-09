@@ -77,3 +77,12 @@ const toggleHeader = () => {
 
 window.addEventListener("scroll", toggleHeader);
 window.addEventListener("load", toggleHeader);
+document.querySelectorAll('.sec-products .wishlist').forEach((item) => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('active');
+
+    const icon = item.querySelector('i');
+    icon.classList.toggle('zmdi-favorite');
+    icon.classList.toggle('zmdi-favorite-outline');
+  });
+});
