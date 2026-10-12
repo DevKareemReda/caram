@@ -503,6 +503,11 @@ pping .cart-items .cart-desc {
 	.sec-slider .slider-next {
 		right: 2%;
 	}
+	
+.sec-slider .slider-arrow {
+	width: 35px;
+	height: 35px;
+}
 }
 
 /* _____ style sec-product _____ */
