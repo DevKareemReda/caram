@@ -77,6 +77,9 @@ const toggleHeader = () => {
 
 window.addEventListener("scroll", toggleHeader);
 window.addEventListener("load", toggleHeader);
+
+
+
 document.querySelectorAll('.sec-products .wishlist').forEach((item) => {
   item.addEventListener('click', () => {
     item.classList.toggle('active');
