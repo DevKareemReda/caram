@@ -105,6 +105,7 @@ img {
 input,
 button {
 	border: none;
+	font-family: "Jost";
 }
 
 h1,
@@ -118,10 +119,6 @@ h6 {
 
 svg {
 	vertical-align: middle;
-}
-
-.row > * {
-	padding: 0 15px;
 }
 
 /* _____ style header top _____ */
@@ -205,6 +202,42 @@ svg {
 .header-top .header-icons li:last-of-type {
 	margin-right: 0;
 }
+
+.search-box {
+	width: 185px;
+}
+
+
+.header-top .header-icons li.search .search-box .zmdi-search {
+	color: #f7f7f7;
+	font-size: 17px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	transition: 0.4s;
+}
+
+.header-top .header-icons li.search .search-box input {
+	width: 100%;
+	padding-left: 25px;
+	color: #fff;
+	height: 38px;
+	width: 100%;
+	outline: none;
+	font-size: 12px;
+	border: none;
+	transition: 0.4s;
+	border-bottom: 1px solid #ddd;
+	background-color: transparent;
+}
+
+.header-top .header-icons li.search .search-box input::placeholder {
+	color: #fff;
+	transition: 0.4s;
+}
+
+
 .header-top .header-icons li.shopping svg,
 .header-top .header-icons li.wishlist svg {
 	margin-right: 28px;
@@ -346,6 +379,16 @@ pping .cart-items .cart-desc {
 	background-color: var(--fColor);
 	color: #fff;
 }
+
+.header-top.active .header-icons li.search .search-box .zmdi-search,
+.header-top:hover .header-icons li.search .search-box .zmdi-search,
+.header-top.active .header-icons li.search .search-box input,
+.header-top:hover .header-icons li.search .search-box input,
+.header-top.active .header-icons li.search .search-box input::placeholder,
+.header-top:hover .header-icons li.search .search-box input::placeholder {
+	color: var(--fColor);
+}
+
 
 /* _____ style sec-hero _____ */
 .sec-slider {
@@ -509,6 +552,9 @@ pping .cart-items .cart-desc {
 }
 
 /* _____ style sec-product _____ */
+.sec-products .row > * {
+	padding: 0 15px;
+}
 
 .sec-products .product-head h3 {
 	font-size: 28px;
@@ -554,33 +600,6 @@ pping .cart-items .cart-desc {
 	text-decoration: line-through;
 }
 
-.sec-products .product-btn button {
-	    cursor: pointer;
-    border-radius: 25px;
-    width: 44%;
-    background: var(--fColor);
-    color: #fff;
-    position: absolute;
-    inset: auto 0 -15px;
-    margin: 0 auto;
-    transition: 0.3s linear;
-    font: 700 10px/35px "Oswald";
-    text-transform: uppercase;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.sec-products .product-btn button:hover {
-	background-color: #000;
-	color: #fff;
-}
-
-.sec-products .product-inner:hover .product-btn button {
-	opacity: 1;
-	visibility: visible;
-	inset: auto 0 15px;
-}
-
 .sec-products .product-inner .offer {
 	position: absolute;
 	top: 15px;
@@ -600,36 +619,6 @@ pping .cart-items .cart-desc {
 	font-size: 15px;
 }
 
-.sec-products .product-inner .wishlist {
-	position: absolute;
-	right: -18px;
-	top: 15px;
-	width: 42px;
-	height: 42px;
-	border-radius: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: #000;
-	background-color: #fff;
-	box-shadow: 4px 4px 5px #0000001a;
-	cursor: pointer;
-	font-size: 17px;
-	opacity: 0;
-	visibility: hidden;
-	transition: 0.5s;
-}
-
-.sec-products .product-inner .wishlist i {
-	color: #000;
-}
-
-.sec-products .product-inner:hover .wishlist {
-	opacity: 1;
-	visibility: visible;
-	right: 15px;
-}
-
 @media (max-width: 360px) {
 	.sec-products .row .col {
 		flex: 0 0 100% !important;
@@ -644,9 +633,9 @@ pping .cart-items .cart-desc {
 	font-size: 13px;
 	text-align: center;
 	color: #fff;
-	font-family: "karla";
+	font-family: Oswald;
 	width: fit-content;
-	padding: 13px 23px
+	padding: 13px 30px;
 }
 
 .sec-footer input {
@@ -689,3 +678,43 @@ pping .cart-items .cart-desc {
 	opacity: .1;
 	z-index: 444;
 }  */
+
+.cart-button {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	display: flex;
+	transform: translateX(-50%);
+}
+.cart-button li {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	margin: 0 8px;
+	border-radius: 50%;
+	background-color: var(--fColor);
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	opacity: 0;
+	transform: translateY(190%);
+	transition: 0.4s linear;
+	cursor: pointer;
+}
+
+.product-inner:hover .cart-button li {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.product-inner .cart-button li:nth-child(1) {
+	transition-delay: 0.1s;
+}
+
+.product-inner .cart-button li svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
