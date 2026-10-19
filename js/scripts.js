@@ -23,10 +23,10 @@
 // 	},
 // });
 
-      var swiper = new Swiper('.mySwiper', {
-        grabCursor: true,
-        effect: 'creative',
-					autoplay: {
+var swiper = new Swiper(".mySwiper", {
+	grabCursor: true,
+	effect: "creative",
+	autoplay: {
 		delay: 15000,
 		pauseOnMouseEnter: false,
 		disableOnInteraction: true,
@@ -34,15 +34,16 @@
 	loop: true,
 
 	speed: 1200,
-        creativeEffect: {
-          prev: {
-            shadow: true,
-            translate: ['-20%', 0, -1],
-          },
-          next: {
-            translate: ['100%', 0, 0],
-          },
-        },		pagination: {
+	creativeEffect: {
+		prev: {
+			shadow: true,
+			translate: ["-20%", 0, -1],
+		},
+		next: {
+			translate: ["100%", 0, 0],
+		},
+	},
+	pagination: {
 		el: ".slider-dots",
 		clickable: true,
 		bulletClass: "dots",
@@ -52,9 +53,7 @@
 		prevEl: ".slider-prev",
 		nextEl: ".slider-next",
 	},
-			
-      });
-
+});
 
 let headerTop = document.querySelector(".header-top");
 
@@ -78,14 +77,29 @@ const toggleHeader = () => {
 window.addEventListener("scroll", toggleHeader);
 window.addEventListener("load", toggleHeader);
 
+document.querySelectorAll(".sec-products .wishlist").forEach((item) => {
+	item.addEventListener("click", () => {
+		item.classList.toggle("active");
 
-
-document.querySelectorAll('.sec-products .wishlist').forEach((item) => {
-  item.addEventListener('click', () => {
-    item.classList.toggle('active');
-
-    const icon = item.querySelector('i');
-    icon.classList.toggle('zmdi-favorite');
-    icon.classList.toggle('zmdi-favorite-outline');
-  });
+		const icon = item.querySelector("i");
+		icon.classList.toggle("zmdi-favorite");
+		icon.classList.toggle("zmdi-favorite-outline");
+	});
 });
+
+const shopping = document.querySelector(".shopping");
+const cartBox = document.querySelector(".cart-box");
+
+shopping.onclick = function () {
+	shopping.classList.toggle("active");
+};
+
+cartBox.onclick = function (e) {
+	e.stopPropagation();
+};
+
+window.onclick = function (e) {
+	if (!shopping.contains(e.target)) {
+		shopping.classList.remove("active");
+	}
+};
