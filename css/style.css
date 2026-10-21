@@ -8,7 +8,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap");
-
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 
 /* _____ style all rules _____ */
@@ -168,7 +167,8 @@ svg {
 	margin-right: 0;
 }
 
-.header-top .menu li a {
+.header-top .menu li a,
+.mobile {
 	font-size: 12px;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -442,6 +442,34 @@ svg {
 }
 
 
+
+.mobile {
+	background-color: #fff;
+	width: 250px;
+	position: absolute;
+	left: 0;
+	z-index: 999;
+	height: 100%;
+	padding: 30px;
+}
+
+
+.mobile .mobile-head span {
+	font-size: 30px;
+	color: #000;
+	float: right;
+	position: absolute;
+	top: 0;
+	right: 20px;
+	cursor: pointer;
+}
+
+.mobile ul li {
+	padding: 10px 0;
+}
+.mobile ul li a {
+	display: block !important;
+}
 /* _____ style sec-hero _____ */
 .sec-slider {
 	overflow: hidden;
@@ -770,3 +798,13 @@ svg {
 	transform: translate(-50%, -50%);
 }
 
+
+
+/* Show cart and wishlist buttons on touch screens */
+@media (hover: none) and (pointer: coarse) {
+    .product-inner .cart-button li {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0s;
+    }
+}
