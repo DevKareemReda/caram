@@ -212,17 +212,17 @@ svg {
 
 .header-top .header-icons li.search .search-box .zmdi-search {
 	color: #f7f7f7;
-	font-size: 17px;
+	font-size: 14px;
 	position: absolute;
 	top: 50%;
-	left: 0;
+	right: 10px;
 	transform: translateY(-50%);
 	transition: 0.4s;
 }
 
 .header-top .header-icons li.search .search-box input {
 	width: 100%;
-	padding-left: 25px;
+	padding-right: 25px;
 	color: #fff;
 	height: 38px;
 	width: 100%;
@@ -373,6 +373,9 @@ svg {
 	.header-top .logo {
 		max-width: 110px;
 	}
+	.header-top .header-icons li {
+    margin-right: 0 !important;
+}
 	.header-top .header-icons li.shopping svg {
 		margin-right: 0;
 	}
@@ -808,3 +811,4 @@ svg {
         transition-delay: 0s;
     }
 }
+
