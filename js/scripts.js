@@ -63,7 +63,9 @@ let prevScroll = window.scrollY;
 const toggleHeader = () => {
 	let currentScroll = window.scrollY;
 	if (currentScroll === 0) {
-		headerTop.classList.remove("active");
+		if (location.pathname.endsWith("index.html")) {
+			headerTop.classList.remove("active");
+		}
 	} else if (prevScroll > currentScroll) {
 		headerTop.style.top = "0";
 		headerTop.classList.add("active");
@@ -75,20 +77,10 @@ const toggleHeader = () => {
 };
 
 window.addEventListener("scroll", toggleHeader);
-window.addEventListener("load", toggleHeader);
-
-document.querySelectorAll(".sec-products .wishlist").forEach((item) => {
-	item.addEventListener("click", () => {
-		item.classList.toggle("active");
-
-		const icon = item.querySelector("i");
-		icon.classList.toggle("zmdi-favorite");
-		icon.classList.toggle("zmdi-favorite-outline");
-	});
-});
 
 const shopping = document.querySelector(".shopping");
 const cartBox = document.querySelector(".cart-box");
+const cartIcons = document.querySelector(".cart-icons");
 
 shopping.onclick = function () {
 	shopping.classList.toggle("active");
@@ -98,8 +90,8 @@ cartBox.onclick = function (e) {
 	e.stopPropagation();
 };
 
-window.onclick = function (e) {
-	if (!shopping.contains(e.target)) {
-		shopping.classList.remove("active");
-	}
-};
+// window.onclick = function (e) {
+// 	if (!shopping.contains(e.target) &&) {
+// 		shopping.classList.remove("active");
+// 	}
+// };
